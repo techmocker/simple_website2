@@ -68,3 +68,48 @@ section {
 .sticky + .content {
     padding-top: 102px;
   }
+
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+  
+  button[type="submit"] {
+    background-color: #eed920;
+    color: #000000;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #ff9100;
+    
+  }
+
+  .container {
+    height: 100px;
+    position: relative;
+    border: 3px solid rgb(238, 255, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+  }
+  
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+  }
