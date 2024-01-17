@@ -24,14 +24,15 @@ section {
 }
 
 .grid-container {
-    display: grid;
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: center;
     grid-template-columns: 155px 155px 155px; /*Make the grid smaller than the container*/
     gap: 10px;
     background-color: #cf9f00;
     padding: 20px;
     animation-name: example;
     animation-duration: 10s;
+    flex-wrap: wrap;
 }
   
   @keyframes example {
