@@ -26,13 +26,20 @@ section {
 .grid-container {
     display: flex;
     justify-content: center;
-    grid-template-columns: 155px 155px 155px; /*Make the grid smaller than the container*/
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
     gap: 10px;
     background-color: #cf9f00;
     padding: 20px;
     animation-name: example;
     animation-duration: 10s;
     flex-wrap: wrap;
+    
+}
+
+@media only screen and (max-width: 576px) {
+  .grid-container {
+    grid-row: 2 / span 2;
+  }
 }
   
   @keyframes example {
