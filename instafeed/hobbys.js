@@ -1,22 +1,22 @@
-// Array mit Hobbies erstellen
-let hobbies = ["Lesen", "Sport", "Musik", "Kochen"];
+// hobbys.js
 
-// Funktion zum Hinzufügen von Hobbies
-function addHobby(newHobby) {
-  // Überprüfen, ob mehr als 5 Elemente im Array sind
-  if (hobbies.length >= 5) {
-    // Das erste Element löschen
-    hobbies.shift();
+const hobbies = [];
+
+function addHobby() {
+  const hobbyInput = document.getElementById('hobbyInput').value;
+  if (hobbyInput) {
+    hobbies.push(hobbyInput);
+    document.getElementById('hobbyInput').value = '';
   }
-  // Das neue Hobby ans Ende des Arrays hinzufügen
-  hobbies.push(newHobby);
 }
 
-// Hobbies hinzufügen
-addHobby("Reisen");
-addHobby("Fotografie");
+function displayHobbies() {
+  const hobbyList = document.getElementById('hobbyList');
+  hobbyList.innerHTML = ''; // Clear previous list
 
-// Hobbies über einen for-loop ausgeben
-for (let i = 0; i < hobbies.length; i++) {
-  console.log(`Mein ${i + 1}. Hobby: ${hobbies[i]}`);
+  for (let i = 0; i < hobbies.length; i++) {
+    const listItem = document.createElement('li');
+    listItem.textContent = `Mein ${i + 1}. Hobby: ${hobbies[i]}`;
+    hobbyList.appendChild(listItem);
+  }
 }
