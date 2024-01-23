@@ -33,14 +33,21 @@ body {
     margin-top: 5px;
   }
   
+
+  
   button[type="submit"] {
-    background-color: #ee2020;
-    color: #fff;
+    background-color: #eed920;
+    color: #000000;
     cursor: pointer;
-    padding: 10px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
   }
   
   button[type="submit"]:hover {
-    background-color: #b32020;
+    background-color: #ff9100;
+    
   }
-  

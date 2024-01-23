@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Profile</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+ 
+    <div id="navbar">
+        <img src="assets/images/logo.png" alt="Logo" style="width: 250px; height: auto; margin-left: 15px;">
+        <a class="active" href="index.html">Home</a>
+        <a href="#" onclick="openRegisterPopup()">Registrieren</a>
+        <a href="#" onclick="openLoginPopup()">Anmelden</a>
+    </div>
+      
+    <div id="loginPopup" class="popup">
+      <span class="close" onclick="closePopup('loginPopup')">&times;</span>
+      <iframe src="login.html"></iframe>
+  </div>
+  
+  <div id="registerPopup" class="popup">
+      <span class="close" onclick="closePopup('registerPopup')">&times;</span>
+      <iframe src="register.html"></iframe>
+  </div>
+
+
+  <div class="profile-container">
+    <div class="profile-header">
+        <div class="profile-image"></div>
+        <div class="profile-info">
+            <h3 class="profile-username">Benutzername</h3>
+            <div class="profile-buttons">
+                <button>Folgen</button>
+                <button>Nachricht senden</button>
+                <button>Mehr</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile-stats">
+        <button>Beiträge</button>
+        <button>Follower</button>
+        <button>Gefolgt</button>
+    </div>
+
+    <h2>Losem</h2>
+
+    <p>Sie gönnen mit den Lippen, aber hassen mit dem Herz. ♥️.</p>
+</div>
+
+
+
+
+
+          <!-- Volljährigkeitsprüfung
+    <div>
+      <label for="nameInput">Name:</label>
+      <input type="text" id="nameInput" placeholder="Gib deinen Namen ein">
+
+      <label for="alterInput">Alter:</label>
+      <input type="number" id="alterInput" placeholder="Gib dein Alter ein">
+
+      <button onclick="performVolljaehrigkeitspruefung()">Volljährigkeitsprüfung</button>
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+    Hobbys
+    <div>
+      <label for="hobbyInput">Hobby:</label>
+      <input type="text" id="hobbyInput" placeholder="Gib dein Hobby ein">
+
+      <button onclick="addHobby()">Hobby hinzufügen</button>
+      <button onclick="displayHobbies()">Hobbys anzeigen</button>
+
+      <ul id="hobbyList"></ul>
+    </div>
+  </div>
+
+          <div class="container">
+            <div class="center">
+              <button type="submit" onclick="window.location.href='https://shadowcurse.de/forms/index.html';">Kontakt</button>
+            </div>
+          </div> 
+        -->
+      <script src="assets/js/registerlogin.js"></script>
+      <script src="assets/js/sticky.js"></script>
+   <!--    <script src="alterspruefung.js"></script>
+      <script src="hobbys.js"></script> -->
+
+</body>
+</html>
