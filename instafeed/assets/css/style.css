@@ -1,57 +1,41 @@
 body {
   margin: 0;
-  font-size: 28px;
+  font-size: 1.75rem; /* Angepasste Schriftgröße für bessere Anpassungsfähigkeit */
   font-family: Arial, sans-serif;
-  display: static;
-  flex-wrap: nowrap;
-  justify-content: space-between;
 }
+
 
 .header {
   background-color: #f1f1f1;
-  padding: 30px;
+  padding: 2rem;
   text-align: center;
 }
-  
-  #navbar {
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  #navbar a {
-    float: right;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  #navbar a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  #navbar a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
-  
 
-  
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-  .sticky + .content {
-    padding-top: 60px;
-  }
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
 
-  /* Default styles */
+#navbar a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+}
 
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Vereinheitlichte und optimierte Responsivität */
 
 .content {
   display: flex;
@@ -60,12 +44,9 @@ body {
 }
 
 p {
-  flex-basis: calc(33.33% - 20px); /* Adjust the width as needed */
+  flex-basis: calc(33.33% - 20px);
   margin: 10px;
 }
-
-/* Media queries for responsiveness */
-
 
 @media screen and (max-width: 768px) {
   p {
@@ -79,7 +60,6 @@ p {
   }
 }
 
-
 .popup {
   display: none;
   position: fixed;
@@ -90,7 +70,7 @@ p {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.popup iframe {
+.popup iframe, .popup img {
   width: 80%;
   height: 80%;
   margin: 10% auto;
@@ -106,14 +86,12 @@ p {
   color: white;
 }
 
-
-
-
+/* Verbesserte Profil-Stilisierung */
 
 .profile-container {
-  max-width: 100%;
-  margin: 20px auto;
-  padding: 20px;
+  max-width: 50%;
+  margin: auto;
+  padding-top: 5%;
 }
 
 .profile-header {
@@ -122,60 +100,45 @@ p {
 }
 
 .profile-image {
-  width: 80px;
-  height: 80px;
+  width: 175px;
+  height: 175px;
   border-radius: 50%;
-  background-color: #ddd; /* Placeholder background color */
-  margin-right: 20px;
-  overflow: hidden; /* Damit das Bild im runden Rahmen bleibt */
+  background-color: #ddd;
+  margin-right: 10%;
+  overflow: hidden;
 }
 
 .profile-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Automatisches Zuschneiden */
+  object-fit: cover;
 }
 
 .profile-info h1 {
   margin: 0;
 }
 
-.profile-buttons {
-  display: flex;
-  margin-top: 10px; /* Abstand zwischen Benutzernamen und Buttons */
-  margin-left: 350px; /* Alles nach rechts schieben */
+/* Vereinheitlichte Werte für Buttons und Stats Buttons */
+
+.profile-buttons,
+.profile-stats {
+  margin-top: 1px;
 }
 
-.profile-buttons button {
-  margin-right: 10px;
-  padding: 1px 10px;
+.profile-buttons button{
+  margin-right: 30px;
+  padding: 6px;
   background-color: #3498db;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
-
-.profile-stats {
-  display: flex;
-  margin: 10px;
-  width: auto;
-  margin-left: 452px;
-}
-
-.profile-stats button {
-  display: flex;
-  padding: 4px;
-  background-color: #eee;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  font-size: 50%;
-}
-
-.profile-stats button:not(:last-child) {
-  margin-right: 5px;
+.profile-buttons button:last-child,
+.profile-stats button:last-child {
+  margin-right: 0;
 }
 
 .profile-stats button:hover {
@@ -199,13 +162,87 @@ p {
   margin: 0;
 }
 
+.profile-stats {
+  display: flex;
+  width: auto;
+  padding-top: 3%;
+}
+
+.profile-stats button {
+  margin: 10px;
+  background-color: transparent;
+  border: 0px solid;
+  cursor: pointer;
+  font-size: 50%;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.profile-stats button:not(:last-child) {
+  margin-right: 5px;
+}
+
+.profile-stats button:hover {
+  background-color: #ddd;
+}
+
+.profile-describe{
+padding: 1px;
+background-color: transparent;
+border: 0px solid;
+cursor: pointer;
+font-size: 44%;
+font-weight: bold;
+line-height: 1;
+}
 
 
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px; /* Abstand zwischen den Bildern anpassen */
+  margin-top: 50px; /* Abstand vom vorherigen Inhalt anpassen */
+}
 
+.grid-item {
+  overflow: hidden;
+}
 
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+/* Optional: Ein zweites Grid mit anderen Bildern */
 
+.second-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px; /* Abstand zwischen den Bildern anpassen */
+  margin-top: 20px; /* Abstand zum ersten Grid anpassen */
+}
 
+/* Stile für das zweite Grid anpassen, falls erforderlich */
 
+.page-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-weight: bold;
+}
 
+.page-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #777;
+  border-bottom: 2px solid transparent;
+}
 
+.page-button.active {
+  color: #000;
+  font-weight: bold;
+  border-bottom-color: #000;
+}
