@@ -127,6 +127,13 @@ p {
   border-radius: 50%;
   background-color: #ddd; /* Placeholder background color */
   margin-right: 20px;
+  overflow: hidden; /* Damit das Bild im runden Rahmen bleibt */
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Automatisches Zuschneiden */
 }
 
 .profile-info h1 {
@@ -136,7 +143,7 @@ p {
 .profile-buttons {
   display: flex;
   margin-top: 10px; /* Abstand zwischen Benutzernamen und Buttons */
-  margin-left: 300px; /* Alles nach rechts schieben */
+  margin-left: 350px; /* Alles nach rechts schieben */
 }
 
 .profile-buttons button {
@@ -147,20 +154,24 @@ p {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 20px;
 }
 
 
 .profile-stats {
   display: flex;
-  margin: 10px 0;
+  margin: 10px;
+  width: auto;
+  margin-left: 452px;
 }
 
 .profile-stats button {
-  flex: 1;
-  padding: 10px;
+  display: flex;
+  padding: 4px;
   background-color: #eee;
   border: 1px solid #ccc;
   cursor: pointer;
+  font-size: 50%;
 }
 
 .profile-stats button:not(:last-child) {
